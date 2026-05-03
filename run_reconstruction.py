@@ -40,7 +40,7 @@ if __name__ == "__main__":
     path_to_events = args.input_file
 
     header = pd.read_csv(path_to_events, delim_whitespace=True, header=None, names=['width', 'height'],
-                         dtype={'width': np.int, 'height': np.int},
+                         dtype={'width': int, 'height': int},
                          nrows=1)
     width, height = header.values[0]
     print('Sensor size: {} x {}'.format(width, height))
